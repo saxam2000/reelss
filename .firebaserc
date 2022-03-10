@@ -1,5 +1,7 @@
 {
   "projects": {
-    "default": "reels-40b22"
-  }
+    "reels": "reels-ddce7",
+    "default": "reels-ddce7"
+  },
+  "targets": {}
 }

@@ -1,11 +1,11 @@
-import firebase from "firebase/app";
+import firebase from "firebase";
 import "firebase/auth";
 import "firebase/storage";
 import "firebase/firestore";
-import {key} from "../secret"
-firebase.initializeApp();
+import {key} from "./secret";
+firebase.initializeApp(key);
 export const auth = firebase.auth();
-const firestore = firebase.firestore(key); //we will not export whole firestore so that we can only provide those information which we want to  provide
+const firestore = firebase.firestore(); //we will not export whole firestore so that we can only provide those information which we want to  provide
 export const database = {
    users:firestore.collection('users'),
   posts:firestore.collection('posts'),
